@@ -10,7 +10,8 @@ FROM thecodingmachine/gotenberg:workspace AS workspace
 ARG VERSION
 
 ENV GOOS=linux \
-    GOARCH=amd64 \
+    GOARCH=arm \
+    GOARM=5 \
     CGO_ENABLED=0
 
 # Define our workding outside of $GOPATH (we're using go modules).
